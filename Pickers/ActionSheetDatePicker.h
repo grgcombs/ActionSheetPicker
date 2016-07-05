@@ -34,14 +34,14 @@ typedef void(^ActionDateCancelBlock)(ActionSheetDatePicker *picker);
 
 @interface ActionSheetDatePicker : AbstractActionSheetPicker
 
-@property (nonatomic, retain) NSDate *minimumDate; // specify min/max date range. default is nil. When min > max, the values are ignored. Ignored in countdown timer mode
-@property (nonatomic, retain) NSDate *maximumDate; // default is nil
+@property (nonatomic, strong) NSDate *minimumDate; // specify min/max date range. default is nil. When min > max, the values are ignored. Ignored in countdown timer mode
+@property (nonatomic, strong) NSDate *maximumDate; // default is nil
 
 @property (nonatomic) NSInteger minuteInterval; // display minutes wheel with interval. interval must be evenly divided into 60. default is 1. min is 1, max is 30
 
-@property (nonatomic, retain) NSLocale   *locale;   // default is [NSLocale currentLocale]. setting nil returns to default
+@property (nonatomic, strong) NSLocale   *locale;   // default is [NSLocale currentLocale]. setting nil returns to default
 @property (nonatomic, copy)   NSCalendar *calendar; // default is [NSCalendar currentCalendar]. setting nil returns to default
-@property (nonatomic, retain) NSTimeZone *timeZone; // default is nil. use current time zone or time zone from calendar
+@property (nonatomic, strong) NSTimeZone *timeZone; // default is nil. use current time zone or time zone from calendar
 
 @property (nonatomic, assign) NSTimeInterval countDownDuration; // for UIDatePickerModeCountDownTimer, ignored otherwise. default is 0.0. limit is 23:59 (86,399 seconds). value being set is div 60 (drops remaining seconds).
 

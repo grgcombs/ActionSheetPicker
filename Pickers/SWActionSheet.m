@@ -14,7 +14,7 @@ static const enum UIViewAnimationOptions options = UIViewAnimationOptionCurveEas
 
 @interface SWActionSheetVC : UIViewController
 
-@property (nonatomic, retain) SWActionSheet *actionSheet;
+@property (nonatomic, strong) SWActionSheet *actionSheet;
 
 @end
 

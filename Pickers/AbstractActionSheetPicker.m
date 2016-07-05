@@ -145,7 +145,6 @@ CG_INLINE BOOL isIPhone4()
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 
-    [super dealloc];
 }
 
 - (UIView *)configuredPickerView
